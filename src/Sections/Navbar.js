@@ -15,7 +15,7 @@ class Navbar extends Component {
 			<div className="Navbar">
 				<Categories />
 				<Link to={`/`}>
-					<img src={navbarLogo} />
+					<img src={navbarLogo} alt="logo" />
 				</Link>
 
 				<div className="NavbarRight">

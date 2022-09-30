@@ -25,7 +25,7 @@ class ProductCard extends Component {
 					this.setState({ fastShopBtn: true });
 				}}
 				onMouseLeave={() => {
-					this.setState({ fastShopBtn: false });
+					this.setState({ fastShopBtn: false, fastShopAtts: false });
 				}}
 			>
 				<div
@@ -56,7 +56,7 @@ class ProductCard extends Component {
 						>
 							OUT OF STOCK
 						</div>
-						<img className="Image" src={gallery[0]}></img>
+						<img className="Image" alt="galleryBigImg" src={gallery[0]}></img>
 					</div>
 					<div className="desc">
 						<div>

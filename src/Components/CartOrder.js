@@ -47,7 +47,7 @@ const readyOrder = (Component) => {
 class CartOrder extends Component {
 	state = {};
 	render() {
-		const { totalPrices, quantity, items } = this.props;
+		const { totalPrices, quantity } = this.props;
 		return (
 			<div className="CartOrder">
 				<div className="CartOrderDetails">

@@ -21,38 +21,38 @@ class CartProduct extends Component {
 			? this.setState({ selected: limit })
 			: this.setState({ selected: this.state.selected - 1 });
 	};
+
 	render() {
+		const myBag = this.props.myBag;
+		const product = this.props.data.product;
 		return (
 			<div className="CartProduct">
 				<div className="col1">
-					<PNames
-						myBag={this.props.myBag}
-						name={this.props.data.product.name}
-						id={this.props.data.product.id}
-					/>
-					<Price prices={this.props.data.product.prices} />
+					<PNames myBag={myBag} name={product.name} id={product.id} />
+					<Price prices={product.prices} />
 
 					<AdjustButtons
-						productId={this.props.data.product.id}
-						place={"cart" + this.props.data.product.id}
+						productId={product.id}
+						place={"cart" + product.id}
 						client={this.props.client}
 					/>
 				</div>
 
 				<div className="col2">
 					<QuantityButtons
-						productId={this.props.data.product.id}
+						productId={product.id}
 						client={this.props.client}
 						inCartQuantity={this.props.inCartQuantity}
 					/>
 					<div className="image">
-						<Link to={`/products/${this.props.data.product.id}`}>
+						<Link to={`/products/${product.id}`}>
 							<img
+								alt="productphoto"
 								style={{ width: "100%", height: "100%" }}
-								src={this.props.data.product.gallery[this.state.selected]}
+								src={product.gallery[this.state.selected]}
 							></img>
 						</Link>
-						{this.props.myBag ? null : (
+						{myBag ? null : (
 							<div className="imgBtns">
 								<div onClick={() => this.switchImg(false)}>
 									{/* <img src={vector}></img> */}

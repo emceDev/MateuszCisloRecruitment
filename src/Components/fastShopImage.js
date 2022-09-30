@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { addToCart } from "../HOC/addToCart";
-import inCart from "../images/CircleIcon.png";
+import fastShopImg from "../images/CircleIcon.png";
 class FastShopImage extends Component {
 	state = {};
 	handleClick(e) {
@@ -8,7 +8,13 @@ class FastShopImage extends Component {
 		this.props.addRemove();
 	}
 	render() {
-		return <img src={inCart} onClick={(e) => this.handleClick(e)} />;
+		return (
+			<img
+				src={fastShopImg}
+				onClick={(e) => this.handleClick(e)}
+				alt="fastShopImg"
+			/>
+		);
 	}
 }
 export default addToCart(FastShopImage);

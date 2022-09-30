@@ -21,12 +21,11 @@ class ProductDetails extends Component {
 	// decoding with sanitization
 	decode(html) {
 		let e = document.getElementsByClassName("Description")[0];
-		let x = e.childNodes.length === 0 ? "" : e.childNodes;
 		e.innerHTML = html;
 		return;
 	}
 	render() {
-		const { id, gallery, brand, attributes, prices, description, isInCart } =
+		const { id, gallery, brand, prices, description, isInCart } =
 			this.props.data.product;
 		return (
 			<>
@@ -41,6 +40,7 @@ class ProductDetails extends Component {
 						<img
 							style={{ height: "100%", width: "100%" }}
 							src={gallery[this.state.selected]}
+							alt="BigImg"
 						></img>
 					</div>
 					<div className="Text">

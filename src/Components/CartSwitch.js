@@ -14,7 +14,7 @@ class CartSwitch extends Component {
 					>
 						{this.props.items.length}
 					</div>
-					<img src={emptyCartImg} />
+					<img alt="emptyCartImg" src={emptyCartImg} />
 				</div>
 				<div
 					className="OverlayTransparent"
