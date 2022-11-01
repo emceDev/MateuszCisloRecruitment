@@ -3,7 +3,11 @@
     z-index: 1000;
     padding-left: 3%;
     padding-right: 5%;
+    height: 100%;
     // height: ;
+    .Container{
+      height: 100%;
+    }
     .Switch{
       div{
         background: #1D1F22;
@@ -83,4 +87,8 @@
   text-transform: uppercase;
   }
 
-  
+  .SwitchContainer{
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }

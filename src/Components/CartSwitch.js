@@ -5,7 +5,7 @@ class CartSwitch extends Component {
 	state = {};
 	render() {
 		return (
-			<div>
+			<div className="SwitchContainer">
 				<div className="Switch" onClick={() => this.props.toggleVisibility()}>
 					<div
 						style={{
