@@ -8,7 +8,11 @@
     .Container{
       height: 100%;
     }
+    .AttrName{
+      margin: 8px;
+    }
     .Switch{
+      width: 20px;
       div{
         background: #1D1F22;
         color:white;
@@ -28,9 +32,10 @@
       flex-direction: column;
       justify-content: space-around;
     }
-    .AttBtnText{
+    .AttrBtnText{
       height: 48px;
-      width: 48px;
+      min-width: 48px;
+      margin-right: 8px;
     }
     .AttrBtns{
       justify-content: flex-start;

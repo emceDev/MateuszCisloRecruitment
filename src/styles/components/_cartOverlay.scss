@@ -1,17 +1,16 @@
 @import '../sections/vars';
 .CartOverlay{
+  ::-webkit-scrollbar{
+    width: 0px;
+  }
+
   max-height: 677px;
-  overflow: scroll;
+  width: 325px;
+  padding: 32px 16px;
+  translate: -305px;
     background-color: white;
     position: absolute;
-    right: 2vw;
-    width: 325px;
-    z-index: 3;
-    // height: 677px;
-    // width: 25vw;
-    padding-left: 1%;
-    padding-right: 1%;
-    padding-bottom: 2%;
+
     .CartProduct{
       display: flex;
       height: 190px;
@@ -20,6 +19,12 @@
      
       max-height: 420px;
       overflow-y: scroll;
+    }
+    .col1{
+      width: 164px;
+      .AttrName{
+        margin-left: 0px;
+      }
     }
     .col2{
       .image{
@@ -33,7 +38,7 @@
         width: 16px;
         height: 16px;}
       .AttrBtnText{
-        width: 24px;
+        min-width: 24px;
         height: 24px;
         }
     }
@@ -65,7 +70,7 @@
     }
     .Buttons{
   
-      margin-top: 5%;
+     
       .BtnCheckout{
         width: 140px;
         height: 43px;
