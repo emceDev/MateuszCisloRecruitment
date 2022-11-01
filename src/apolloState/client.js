@@ -21,7 +21,7 @@ export const selectedCurrencyVar = makeVar({
 // product being modified not yet put into the cart
 
 // selected category
-export const currentCategoryVar = makeVar("tech");
+export const currentCategoryVar = makeVar("all");
 
 // tax value, as it differs depending on country
 export const taxVar = makeVar(25);
