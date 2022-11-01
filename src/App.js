@@ -18,12 +18,10 @@ class App extends Component {
 						path="/"
 						element={<ProductList client={this.props.client} />}
 					></Route>
-
 					<Route
 						path="/Cart"
 						element={<Cart myBag={false} client={this.props.client} />}
 					></Route>
-
 					<Route
 						path="/products/:id"
 						element={
