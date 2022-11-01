@@ -1,12 +1,13 @@
 @import './vars';
 .Navbar{
+  position: sticky;
+  top:0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 80px;
     padding-left: 4vw;
     padding-right: 4vw;
-    position: relative;
     z-index: 100;
     background-color: white;
   }  
