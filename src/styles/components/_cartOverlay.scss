@@ -1,5 +1,7 @@
 @import '../sections/vars';
 .CartOverlay{
+  max-height: 677px;
+  overflow: scroll;
     background-color: white;
     position: absolute;
     right: 2vw;
@@ -13,6 +15,11 @@
     .CartProduct{
       display: flex;
       height: 190px;
+    }
+    .CartProducts{
+     
+      max-height: 420px;
+      overflow-y: scroll;
     }
     .col2{
       .image{
