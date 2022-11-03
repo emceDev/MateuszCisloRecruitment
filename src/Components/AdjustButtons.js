@@ -29,7 +29,9 @@ class AdjustButtons extends Component {
 											return (
 												<div
 													onClick={() =>
-														this.props.modify(attr.name, item.value)
+														this.props.active === false
+															? null
+															: this.props.modify(attr.name, item.value)
 													}
 													className={this.light(
 														attr.name,

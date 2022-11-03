@@ -8,12 +8,10 @@ import FastShopImage from "./fastShopImage";
 class ProductCard extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { fastShopAtts: false, fastShopBtn: false };
+		this.state = { fastShopBtn: false };
 	}
 	showPopup(e) {
 		e.preventDefault();
-
-		this.setState({ fastShopAtts: !this.state.fastShopAtts });
 	}
 	render() {
 		const { inStock, gallery, name, prices, id, isInCart, attributes } =
@@ -25,7 +23,7 @@ class ProductCard extends Component {
 					this.setState({ fastShopBtn: true });
 				}}
 				onMouseLeave={() => {
-					this.setState({ fastShopBtn: false, fastShopAtts: false });
+					this.setState({ fastShopBtn: false });
 				}}
 			>
 				<div
@@ -37,11 +35,7 @@ class ProductCard extends Component {
 
 				{this.state.fastShopAtts && attributes.length > 0 ? (
 					<div className="fastShopPop stockOverlay">
-						<div
-							onMouseLeave={() => {
-								this.setState({ fastShopAtts: false });
-							}}
-						>
+						<div>
 							<AdjustButtons productId={id} client={this.props.client} />
 						</div>
 					</div>

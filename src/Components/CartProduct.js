@@ -35,6 +35,7 @@ class CartProduct extends Component {
 						productId={product.id}
 						place={"cart" + product.id}
 						client={this.props.client}
+						active={false}
 					/>
 				</div>
 
