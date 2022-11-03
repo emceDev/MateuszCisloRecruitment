@@ -32,7 +32,7 @@ class Cart extends Component {
 				) : null}
 				{/* END OF SWITCH */}
 				<div
-					className={myBag ? "CartOverlay" : "Cart"}
+					className={myBag ? "CartOverlay" : "MainCart"}
 					style={{
 						display: this.state.cartVisible && myBag ? "none" : "block",
 					}}

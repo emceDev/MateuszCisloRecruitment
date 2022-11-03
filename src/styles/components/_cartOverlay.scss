@@ -3,18 +3,19 @@
   ::-webkit-scrollbar{
     width: 0px;
   }
-
+ 
   max-height: 677px;
   width: 325px;
   padding: 32px 16px;
   translate: -305px;
     background-color: white;
     position: absolute;
-
+  
     .CartProduct{
       display: flex;
       height: 190px;
     }
+   
     .CartProducts{
      
       max-height: 420px;
@@ -91,3 +92,4 @@
       }
     }
   }
+ 
