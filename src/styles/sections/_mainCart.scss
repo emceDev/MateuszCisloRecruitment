@@ -4,4 +4,18 @@
     width: 1240px;
     padding-left: 100px;
     padding-right: 100px;
+    .CartProduct{
+        padding-top: 24px;
+        padding-bottom: 32px;
+        justify-content: space-between;
+        .col2{
+            width: fit-content;
+            padding: 0px;
+        }
+        .image{
+            width: 200px;
+            height: 288px;
+            margin-left: 20px;
+        }
+    }
 }
