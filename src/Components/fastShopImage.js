@@ -1,20 +1,20 @@
 import { Component } from "react";
-import { addToCart } from "../HOC/addToCart";
+import { setCount } from "../HOC/setQuantity";
 import fastShopImg from "../images/CircleIcon.png";
 class FastShopImage extends Component {
-	state = {};
-	handleClick(e) {
-		this.props.showPopup(e);
-		this.props.addRemove();
+	constructor(props) {
+		super(props);
 	}
 	render() {
 		return (
 			<img
 				src={fastShopImg}
-				onClick={(e) => this.handleClick(e)}
+				onClick={() => {
+					this.props.counter(true);
+				}}
 				alt="fastShopImg"
 			/>
 		);
 	}
 }
-export default addToCart(FastShopImage);
+export default setCount(FastShopImage);

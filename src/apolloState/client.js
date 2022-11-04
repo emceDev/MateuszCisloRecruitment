@@ -64,7 +64,7 @@ const cache = new InMemoryCache({
 					},
 				},
 				inCartQuantity: {
-					read(quantity = 1) {
+					read(quantity = 0) {
 						return quantity;
 					},
 				},

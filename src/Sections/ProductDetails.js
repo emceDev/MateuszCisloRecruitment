@@ -25,8 +25,16 @@ class ProductDetails extends Component {
 		return;
 	}
 	render() {
-		const { id, gallery, brand, prices, description, isInCart } =
-			this.props.data.product;
+		const {
+			id,
+			gallery,
+			brand,
+			prices,
+			description,
+			isInCart,
+			inCartQuantity,
+		} = this.props.data.product;
+
 		return (
 			<>
 				<div className="ProductDetails" id={id}>
@@ -60,7 +68,7 @@ class ProductDetails extends Component {
 							<AddToCartButton
 								productId={id}
 								isInCart={isInCart}
-								addRemove={this.props.addRemove}
+								inCartQuantity={inCartQuantity}
 							/>
 						</div>
 						<div className="Description">
