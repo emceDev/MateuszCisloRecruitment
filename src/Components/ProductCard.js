@@ -41,38 +41,38 @@ class ProductCard extends Component {
 					</div>
 				) : null}
 
-				{/* <Link to={`/products/${id}`}> */}
-				<div className="Image">
-					<div
-						style={{
-							visibility: inStock ? "hidden" : "block",
-						}}
-					>
-						OUT OF STOCK
+				<Link to={`/products/${id}`}>
+					<div className="Image">
+						<div
+							style={{
+								visibility: inStock ? "hidden" : "block",
+							}}
+						>
+							OUT OF STOCK
+						</div>
+						<img className="Image" alt="galleryBigImg" src={gallery[0]}></img>
 					</div>
-					<img className="Image" alt="galleryBigImg" src={gallery[0]}></img>
-				</div>
-				<div className="desc">
-					<div>
-						<PNames name={name} />
-						<Price prices={prices} />
+					<div className="desc">
+						<div>
+							<PNames name={name} />
+							<Price prices={prices} />
+						</div>
+						<div
+							style={{
+								display:
+									this.state.fastShopBtn && inStock && !isInCart
+										? "block"
+										: "none",
+							}}
+						>
+							<FastShopImage
+								productId={id}
+								isInCart={isInCart}
+								showPopup={(e) => this.showPopup(e)}
+							/>
+						</div>
 					</div>
-					<div
-						style={{
-							display:
-								this.state.fastShopBtn && inStock && !isInCart
-									? "block"
-									: "none",
-						}}
-					>
-						<FastShopImage
-							productId={id}
-							isInCart={isInCart}
-							showPopup={(e) => this.showPopup(e)}
-						/>
-					</div>
-				</div>
-				{/* </Link> */}
+				</Link>
 			</div>
 		);
 	}
