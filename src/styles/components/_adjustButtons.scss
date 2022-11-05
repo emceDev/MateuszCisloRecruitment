@@ -1,44 +1,43 @@
-.AttributeContainer{
-  text-transform: uppercase;
-  .active{
-    
-    background-color: black;
-    color: white;
-  }
+.AttributeContainer {
+	text-transform: uppercase;
+	.active {
+		background-color: black;
+		color: white;
+	}
 }
- .AttrBtns{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  div{
-    cursor: pointer;
-  }
+.AttrBtns {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	div {
+		cursor: pointer;
+	}
 }
 
-.AttrBtnText{
-display: flex;
-align-items: center;
-justify-content: center;
-border: Solid 1px #1D1F22;
-margin-right: 12px;
-width: 63px;
-height: 45px;
-padding:2px;
+.AttrBtnText {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: Solid 1px #1d1f22;
+	margin-right: 12px;
+	width: 63px;
+	height: 45px;
+	padding: 2px;
 }
-.AttrBtnColor{
-  border: solid 1px white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.AttrBtnColor {
+	border: solid 1px white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-  width: 32px;
-  height: 32px;
-  div{
-    height: 90%;
-    width:90%;
-  }
-  }
-.AttrBtnColor.active{
-  border: solid 1px green;
-  background-color: white;
+	width: 32px;
+	height: 32px;
+	div {
+		height: 90%;
+		width: 90%;
+	}
+}
+.AttrBtnColor.active {
+	border: solid 1px green;
+	background-color: white;
 }

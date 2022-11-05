@@ -1,99 +1,93 @@
-@import '../sections/vars';
-.CartOverlay{
-  ::-webkit-scrollbar{
-    width: 0px;
-  }
- 
-  max-height: 677px;
-  width: 325px;
-  padding: 32px 16px;
-  translate: -305px;
-    background-color: white;
-    position: absolute;
-  
-    .CartProduct{
-      display: flex;
-      height: 190px;
-    }
-   
-    .CartProducts{
-     
-      max-height: 420px;
-      overflow-y: scroll;
-    }
-    .col1{
-      width: 164px;
-      .AttrName{
-        margin-left: 0px;
-      }
-    }
-    .col2{
-      .image{
-        margin-left: 8px;
-      }
-      width: 153px;
-    }
+@import "../sections/vars";
+.CartOverlay {
+	::-webkit-scrollbar {
+		width: 0px;
+	}
 
-    .AdjustButtons{
-      .AttrBtnColor{ 
-        width: 16px;
-        height: 16px;}
-      .AttrBtnText{
-        min-width: 24px;
-        height: 24px;
-        }
-        div{
-          cursor: default;
-        }
-    }
-    .QuantityButtons{
-      div{
-        cursor: pointer;
-        width: 24px;
-        height: 24px;
-      }
-      
-    }
-    .image{
-      width: 121px;
-      height: 190px;
-    }
-    
-  }
-  .CartOverlayPrice{
-    display: flex;
+	max-height: 677px;
+	width: 325px;
+	padding: 32px 16px;
+	translate: -305px;
+	background-color: white;
+	position: absolute;
 
-  }
-  .CartOverlayBtns{
-    display: flex;
-    justify-content: space-around;
-  }
-  .OverlayBottom{
-    div{
-      display: flex;
-      justify-content: space-between;
-    }
-    .Buttons{
-  
-     
-      .BtnCheckout{
-        width: 140px;
-        height: 43px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: $green;
-      }
-      a{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 140px;
-        height: 43px;
-        text-decoration: none;
-        color:black;
-        border: Solid #1D1F22 1px;
-      }
-    }
-  }
- 
+	.CartProduct {
+		display: flex;
+		height: 190px;
+	}
+
+	.CartProducts {
+		max-height: 420px;
+		overflow-y: scroll;
+	}
+	.col1 {
+		width: 164px;
+		.AttrName {
+			margin-left: 0px;
+		}
+	}
+	.col2 {
+		.image {
+			margin-left: 8px;
+		}
+		width: 153px;
+	}
+
+	.AdjustButtons {
+		.AttrBtnColor {
+			width: 16px;
+			height: 16px;
+		}
+		.AttrBtnText {
+			min-width: 24px;
+			height: 24px;
+		}
+		div {
+			cursor: default;
+		}
+	}
+	.QuantityButtons {
+		div {
+			cursor: pointer;
+			width: 24px;
+			height: 24px;
+		}
+	}
+	.image {
+		width: 121px;
+		height: 190px;
+	}
+}
+.CartOverlayPrice {
+	display: flex;
+}
+.CartOverlayBtns {
+	display: flex;
+	justify-content: space-around;
+}
+.OverlayBottom {
+	div {
+		display: flex;
+		justify-content: space-between;
+	}
+	.Buttons {
+		.BtnCheckout {
+			width: 140px;
+			height: 43px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: $green;
+		}
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 140px;
+			height: 43px;
+			text-decoration: none;
+			color: black;
+			border: Solid #1d1f22 1px;
+		}
+	}
+}

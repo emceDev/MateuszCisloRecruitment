@@ -1,20 +1,19 @@
-.QuantityButtons{
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 100%;
-    div{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 1px solid #1D1F22;
-   
-      text-align: center;
-    
-      width: 45px;
-      height: 45px;
-    }
-  }
-  
+.QuantityButtons {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 100%;
+	div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid #1d1f22;
+
+		text-align: center;
+
+		width: 45px;
+		height: 45px;
+	}
+}

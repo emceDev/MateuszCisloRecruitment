@@ -1,51 +1,48 @@
-.ProductDetails{
-    display: flex;
-    
-    height: 70vh;
-    padding:5vh 10vw 5vh 4vw;
-   
-    .Imgs{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      width: 10%; 
-      background-color: beige;
-      margin-right: 2%;
-      overflow: auto;
-      div{
-        width: 100%;
-        height: 10%;
-        background-color: rebeccapurple;
-        
-      }
-      img{
-        cursor: pointer;
-      }
-    }
-    .BigImg{
-      width: 60%; 
-      background-color: yellow;
-      margin-right: 4%;
-    }
-    .Text{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      width: 40%; 
-     
-    }
-    .AttrName{
-      padding-top: 24px;
-      padding-bottom: 8px;
-    }
-    .AttributeButtonText{
-      width: 63px;
-      height: 45px;
-    }
-    .AttributeButtonsColor{
-      width: 24px;
-      height: 24px;
-    }
- 
-    }
+.ProductDetails {
+	display: flex;
+
+	height: 70vh;
+	padding: 5vh 10vw 5vh 4vw;
+
+	.Imgs {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		width: 10%;
+		background-color: beige;
+		margin-right: 2%;
+		overflow: auto;
+		div {
+			width: 100%;
+			height: 10%;
+			background-color: rebeccapurple;
+		}
+		img {
+			cursor: pointer;
+		}
+	}
+	.BigImg {
+		width: 60%;
+		background-color: yellow;
+		margin-right: 4%;
+	}
+	.Text {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		width: 40%;
+	}
+	.AttrName {
+		padding-top: 24px;
+		padding-bottom: 8px;
+	}
+	.AttributeButtonText {
+		width: 63px;
+		height: 45px;
+	}
+	.AttributeButtonsColor {
+		width: 24px;
+		height: 24px;
+	}
+}

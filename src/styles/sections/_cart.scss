@@ -1,107 +1,104 @@
-@use './_mainCart';
-@import './vars';
+@use "./_mainCart";
+@import "./vars";
 
-.Cart{
-    z-index: 1000;
- 
-    
-    margin-top: 80px;
- 
-    .Container{
-      height: 100%;
-    }
-    .AttrName{
-      margin: 8px;
-    }
-    .Switch{
-      width: 20px;
-      cursor: pointer;
-      div{
-        background: #1D1F22;
-        color:white;
-        border-radius: 50%;
-        text-align: center;
-        transform: translate(50%,10%);
-      }
-      img{
-        height: 35%;
-        transform: translate(0%,-25%);
-      }
-   
-    }
-    .col1{
-      display: flex;
-      width: 100%;
-      flex-direction: column;
-      justify-content: space-around;
-    }
-    .AttrBtnText{
-      height: 48px;
-      min-width: 48px;
-      margin-right: 8px;
-    }
-    .AttrBtns{
-      justify-content: flex-start;
-     div{
-      cursor: default;
-     }
-    }
-    .AttributeButtonColor{
-      height: 40px;
-      width: 40px;
-    }
-    .CartProduct{
-      height: 288px;
-    }
+.Cart {
+	z-index: 1000;
 
-    .col3{
-      width: 230px;
-    }
-  } 
-  .image{
+	margin-top: 80px;
 
-    width: 100%;
-    height: 100%;
-  }
+	.Container {
+		height: 100%;
+	}
+	.AttrName {
+		margin: 8px;
+	}
+	.Switch {
+		width: 20px;
+		cursor: pointer;
+		div {
+			background: #1d1f22;
+			color: white;
+			border-radius: 50%;
+			text-align: center;
+			transform: translate(50%, 10%);
+		}
+		img {
+			height: 35%;
+			transform: translate(0%, -25%);
+		}
+	}
+	.col1 {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	.AttrBtnText {
+		height: 48px;
+		min-width: 48px;
+		margin-right: 8px;
+	}
+	.AttrBtns {
+		justify-content: flex-start;
+		div {
+			cursor: default;
+		}
+	}
+	.AttributeButtonColor {
+		height: 40px;
+		width: 40px;
+	}
+	.CartProduct {
+		height: 288px;
+	}
 
-  .CartOrder{
-    width: 25vw;
-    .BtnOrder{
-      width: 100%;
-      height: 100%;
-    }
-  }
-  .CartOrderDetails{
-    display: flex;
-    font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 28px;
-  
-    div:first-of-type {
-      width: 40%;
-    }
-   div:nth-last-of-type(1){
-    font-weight: 700;
-   }
-  }
-  .ButtonOrder{
-    display: flex;
-    background: $green;
-    justify-content: center;
-    align-items: center;
-    height: 43px;
-    color: white;
-    font-weight: 600;
-  font-size: 14px;
-  line-height: 120%;
-  text-transform: uppercase;
-  cursor: pointer;
-  }
+	.col3 {
+		width: 230px;
+	}
+}
+.image {
+	width: 100%;
+	height: 100%;
+}
 
-  .SwitchContainer{
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
+.CartOrder {
+	width: 25vw;
+	.BtnOrder {
+		width: 100%;
+		height: 100%;
+	}
+}
+.CartOrderDetails {
+	display: flex;
+	font-family: "Raleway";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 28px;
+
+	div:first-of-type {
+		width: 40%;
+	}
+	div:nth-last-of-type(1) {
+		font-weight: 700;
+	}
+}
+.ButtonOrder {
+	display: flex;
+	background: $green;
+	justify-content: center;
+	align-items: center;
+	height: 43px;
+	color: white;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 120%;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.SwitchContainer {
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
