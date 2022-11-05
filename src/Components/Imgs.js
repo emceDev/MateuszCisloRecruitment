@@ -10,7 +10,6 @@ class Imgs extends PureComponent {
 						<div key={index}>
 							<img
 								alt="galleryImg"
-								style={{ height: "100%", width: "100%" }}
 								src={image}
 								id={index}
 								onClick={(e) => this.props.select(e.target.id)}
