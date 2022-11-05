@@ -25,7 +25,7 @@ class ProductList extends PureComponent {
 				</div>
 			);
 		} else {
-			return <div className="ProductList">LoadingProducts</div>;
+			return <div className="ProductList">Loading Products</div>;
 		}
 	}
 }
