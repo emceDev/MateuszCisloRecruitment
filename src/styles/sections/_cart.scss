@@ -15,6 +15,7 @@
     }
     .Switch{
       width: 20px;
+      cursor: pointer;
       div{
         background: #1D1F22;
         color:white;
@@ -41,6 +42,9 @@
     }
     .AttrBtns{
       justify-content: flex-start;
+     div{
+      cursor: default;
+     }
     }
     .AttributeButtonColor{
       height: 40px;
@@ -93,6 +97,7 @@
   font-size: 14px;
   line-height: 120%;
   text-transform: uppercase;
+  cursor: pointer;
   }
 
   .SwitchContainer{

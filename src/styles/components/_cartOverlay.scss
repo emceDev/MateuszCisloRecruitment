@@ -42,9 +42,13 @@
         min-width: 24px;
         height: 24px;
         }
+        div{
+          cursor: default;
+        }
     }
     .QuantityButtons{
       div{
+        cursor: pointer;
         width: 24px;
         height: 24px;
       }
