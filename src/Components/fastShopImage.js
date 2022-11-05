@@ -9,7 +9,7 @@ class FastShopImage extends Component {
 		return (
 			<img
 				src={fastShopImg}
-				onClick={() => {
+				onClick={(e) => {
 					this.props.counter(true);
 				}}
 				alt="fastShopImg"

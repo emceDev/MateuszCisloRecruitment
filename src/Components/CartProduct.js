@@ -21,7 +21,7 @@ class CartProduct extends Component {
 			? this.setState({ selected: limit })
 			: this.setState({ selected: this.state.selected - 1 });
 	};
-
+	componentDidMount() {}
 	render() {
 		const myBag = this.props.myBag;
 		const product = this.props.data.product;

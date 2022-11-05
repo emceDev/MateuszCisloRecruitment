@@ -64,6 +64,9 @@ class ProductCard extends Component {
 										? "block"
 										: "none",
 							}}
+							onClick={(e) => {
+								e.preventDefault();
+							}}
 						>
 							<FastShopImage
 								productId={id}

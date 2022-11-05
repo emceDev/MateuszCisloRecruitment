@@ -18,6 +18,7 @@ class Cart extends Component {
 			? "none"
 			: "block";
 	}
+
 	render() {
 		const { myBag, items, totalPrices, quantity } = this.props;
 		return (
