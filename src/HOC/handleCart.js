@@ -17,12 +17,12 @@ export const handleCart = (Component) => {
 				setIsInCart(product.data.product.isInCart);
 			}
 		}, [product]);
-		// check whether pushed product is in reactive variable ? push with variable contents : push with default
+		// check whether pushed product is in reactive variable
 		function addRemove() {
 			const p = product.data.product;
 			const isInCart = product.data.product.isInCart;
 			const cartProduct = { productId: p.id, count: 1, prices: p.prices };
-			// Adding and deleting from cart: in cart===true ? remove : push to cart
+			// Adding and deleting from cart
 			cartProductsVar(
 				isInCart
 					? currentCart.filter((x) => x.productId !== props.productId)

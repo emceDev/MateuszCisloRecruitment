@@ -9,27 +9,12 @@ export const addToCart = (Component) => {
 			variables: { pid: props.productId },
 		});
 		function addRemove() {
-			// const toCartData = {
-			// 	productId: p.id,
-			// 	prices: p.prices,
-			// 	inCartQuantity: 1,
-			// };
-
 			console.log(props);
 			if (props.inCart === true) {
 				console.log("is in cart");
 			} else {
 				console.log("add to cart");
 			}
-
-			// cartProductsVar(
-			// 	p.isInCart ? [...currentCart] : [...currentCart, toCartData]
-			// );
-			// cartProductsVar(
-			// 	p.isInCart
-			// 		? currentCart.filter((x) => x.productId !== p.id)
-			// 		: [...currentCart, toCartData]
-			// );
 		}
 		if (loading) {
 			<p>loading...</p>;

@@ -8,7 +8,6 @@ export const getProductDetails = (Component) => {
 		let params = useParams().id;
 		const currentCart = useReactiveVar(cartProductsVar);
 		const { data, loading, error } = useQuery(GET_PRODUCT_DETAILS, {
-			// variables: { pid: params === undefined ? props.item : params },
 			variables: { pid: props.place === "product" ? params : props.item },
 		});
 

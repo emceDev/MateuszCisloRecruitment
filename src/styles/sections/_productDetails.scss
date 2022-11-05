@@ -1,9 +1,9 @@
 .ProductDetails{
     display: flex;
-    // width: 100vw;
+    
     height: 70vh;
     padding:5vh 10vw 5vh 4vw;
-    // background-color: violet;
+   
     .Imgs{
       display: flex;
       flex-direction: column;
@@ -17,7 +17,7 @@
         width: 100%;
         height: 10%;
         background-color: rebeccapurple;
-        // margin-bottom: 5
+  
       }
     }
     .BigImg{

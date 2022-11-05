@@ -10,7 +10,7 @@ class CartProduct extends Component {
 	state = {
 		selected: 0,
 	};
-	// gallery image handler
+
 	switchImg = (arg) => {
 		const limit = this.props.data.product.gallery.length - 1;
 		arg

@@ -2,8 +2,6 @@ import { useReactiveVar, useQuery } from "@apollo/client";
 import { currentCategoryVar } from "../apolloState/client";
 import { GET_PRODUCTS } from "../apolloState/queries";
 
-// gets products from specified category
-
 export const getProducts = (Component) => {
 	return function WrappedComponent(props) {
 		const currCat = useReactiveVar(currentCategoryVar);

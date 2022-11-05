@@ -6,8 +6,6 @@ import CartOrder from "../Components/CartOrder";
 import CartOverlayBottom from "../Components/CartOverlayBottom";
 import { getCartItems } from "../HOC/getCartItems";
 
-// CartOverlay is used here in the meaning of "MyBag" in figma
-// this.props.myBag: Boolean - true if cart is opened as MyBag false if opened is Cart
 class Cart extends Component {
 	state = { cartVisible: true, overlay: false };
 
@@ -23,7 +21,6 @@ class Cart extends Component {
 		const { myBag, items, totalPrices, quantity } = this.props;
 		return (
 			<div className="Cart">
-				{/* SWITCH HANDLING VISIBILITY OF CART FROM NAVBAR */}
 				{myBag ? (
 					<CartSwitch
 						cartVisible={this.state.cartVisible}
@@ -31,7 +28,6 @@ class Cart extends Component {
 						items={items}
 					/>
 				) : null}
-				{/* END OF SWITCH */}
 				<div
 					className={myBag ? "CartOverlay" : "MainCart"}
 					style={{
@@ -54,7 +50,7 @@ class Cart extends Component {
 								/>
 							))}
 						</div>
-						{/* Checks whether to load bottom part for my bag or cart */}
+
 						{myBag ? (
 							<CartOverlayBottom totalPrices={totalPrices} />
 						) : (
