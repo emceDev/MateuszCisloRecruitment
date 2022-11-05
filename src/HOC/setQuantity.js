@@ -35,22 +35,22 @@ export const setCount = (Component) => {
 			}
 		};
 		function handleWrite(number) {
-			let nA = [];
+			let newArray = [];
 			if (number === 0) {
-				nA = cart.filter((x) => x.productId !== productId);
+				newArray = cart.filter((product) => product.productId !== productId);
 			} else {
-				cart.map((p) =>
-					p.productId === productId
-						? nA.push({
-								productId: p.productId,
+				cart.map((product) =>
+					product.productId === productId
+						? newArray.push({
+								productId: product.productId,
 								inCartQuantity: number,
-								prices: p.prices,
+								prices: product.prices,
 						  })
-						: nA.push(p)
+						: newArray.push(product)
 				);
 			}
 
-			cartProductsVar(nA);
+			cartProductsVar(newArray);
 		}
 		return (
 			<Component

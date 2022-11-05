@@ -34,13 +34,13 @@ export const selectAttributes = (Component) => {
 		}
 
 		const modify = (attrId, attrValue) => {
-			let nA = [];
+			let newArray = [];
 			attrs.map((attr) =>
 				attr.attrId === attrId
-					? nA.push({ attrId: attrId, attrValue: attrValue })
-					: nA.push(attr)
+					? newArray.push({ attrId: attrId, attrValue: attrValue })
+					: newArray.push(attr)
 			);
-			return handleWrite(nA);
+			return handleWrite(newArray);
 		};
 		if (loading) {
 			<p>loading...</p>;

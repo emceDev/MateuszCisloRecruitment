@@ -28,11 +28,11 @@ const readyOrder = (Component) => {
 
 		function order() {
 			let cartToBuy = [];
-			props.items.map((p) =>
+			props.items.map((product) =>
 				cartToBuy.push({
-					...readFragment(p.productId),
-					quantity: p.inCartQuantity,
-					id: p.productId,
+					...readFragment(product.productId),
+					quantity: product.inCartQuantity,
+					id: product.productId,
 				})
 			);
 			console.log("Ordered: ", cartToBuy);

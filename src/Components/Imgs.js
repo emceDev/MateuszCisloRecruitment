@@ -5,13 +5,13 @@ class Imgs extends Component {
 	render() {
 		return (
 			<div className="Imgs">
-				{this.props.product.gallery.map((x, index) => {
+				{this.props.product.gallery.map((image, index) => {
 					return (
 						<div key={index}>
 							<img
 								alt="galleryImg"
 								style={{ height: "100%", width: "100%" }}
-								src={x}
+								src={image}
 								id={index}
 								onClick={(e) => this.props.select(e.target.id)}
 							></img>

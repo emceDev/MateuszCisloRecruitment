@@ -33,14 +33,6 @@ class ProductCard extends Component {
 					}}
 				></div>
 
-				{this.state.fastShopAtts && attributes.length > 0 ? (
-					<div className="fastShopPop stockOverlay">
-						<div>
-							<AdjustButtons productId={id} client={this.props.client} />
-						</div>
-					</div>
-				) : null}
-
 				<Link to={`/products/${id}`}>
 					<div className="Image">
 						<div

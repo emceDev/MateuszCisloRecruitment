@@ -12,16 +12,16 @@ export const getProductDetails = (Component) => {
 		});
 
 		function addRemove() {
-			const p = data.product;
+			const product = data.product;
 
 			const toCartData = {
-				productId: p.id,
-				prices: p.prices,
+				productId: product.id,
+				prices: product.prices,
 				inCartQuantity: 1,
 			};
 			cartProductsVar(
-				p.isInCart
-					? currentCart.filter((x) => x.productId !== p.id)
+				product.isInCart
+					? currentCart.filter((product) => product.productId !== product.id)
 					: [...currentCart, toCartData]
 			);
 		}

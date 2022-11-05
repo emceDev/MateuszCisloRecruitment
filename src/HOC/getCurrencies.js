@@ -18,7 +18,7 @@ export const getCurrencies = (Component) => {
 				<Component
 					{...props}
 					data={data}
-					selectCurrency={(x) => selectCurrency(x)}
+					selectCurrency={(arg) => selectCurrency(arg)}
 					currenc={currenc}
 				/>
 			);

@@ -24,7 +24,9 @@ const cache = new InMemoryCache({
 					read(_, { readField }) {
 						const productId = readField("id");
 
-						let z = cartProductsVar().some((x) => x.productId === productId);
+						let z = cartProductsVar().some(
+							(product) => product.productId === productId
+						);
 						return z;
 					},
 				},

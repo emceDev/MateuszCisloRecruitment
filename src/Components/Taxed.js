@@ -8,11 +8,11 @@ class Taxed extends Component {
 		const { prices, currenc, tax } = this.props;
 		return (
 			<>
-				{prices.map((x) =>
-					x.currency.label === currenc.label ? (
-						<p key={x.currency.label}>
+				{prices.map((price) =>
+					price.currency.label === currenc.label ? (
+						<p key={price.currency.label}>
 							{currenc.symbol}
-							{x.amount / tax}
+							{price.amount / tax}
 						</p>
 					) : null
 				)}

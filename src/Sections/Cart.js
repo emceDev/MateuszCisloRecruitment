@@ -40,12 +40,12 @@ class Cart extends Component {
 							{items.length > 1 || items.length === 0 ? " items" : " item"}
 						</div>
 						<div className="CartProducts">
-							{items.map((x) => (
+							{items.map((item) => (
 								<CartProduct
 									myBag={myBag}
-									key={x.productId}
-									item={x.productId}
-									inCartQuantity={x.inCartQuantity}
+									key={item.productId}
+									item={item.productId}
+									inCartQuantity={item.inCartQuantity}
 									client={this.props.client}
 								/>
 							))}
