@@ -24,10 +24,10 @@ const cache = new InMemoryCache({
 					read(_, { readField }) {
 						const productId = readField("id");
 
-						let z = cartProductsVar().some(
+						const product = cartProductsVar().some(
 							(product) => product.productId === productId
 						);
-						return z;
+						return product;
 					},
 				},
 				setAttrs: {
@@ -35,8 +35,8 @@ const cache = new InMemoryCache({
 						const defs = [];
 						if (setAttrs.length === 0) {
 							readField("attributes")?.map((ref) => {
-								let id = ref.name;
-								let value = readField("items", ref)[0].__ref.replace(
+								const id = ref.name;
+								const value = readField("items", ref)[0].__ref.replace(
 									"Attribute:",
 									""
 								);

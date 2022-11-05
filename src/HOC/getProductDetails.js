@@ -5,10 +5,10 @@ import { GET_PRODUCT_DETAILS } from "../apolloState/queries";
 
 export const getProductDetails = (PureComponent) => {
 	return function WrappedComponent(props) {
-		let params = useParams().id;
+		const urlParams = useParams().id;
 		const currentCart = useReactiveVar(cartProductsVar);
 		const { data, loading, error } = useQuery(GET_PRODUCT_DETAILS, {
-			variables: { pid: props.place === "product" ? params : props.item },
+			variables: { pid: props.place === "product" ? urlParams : props.item },
 		});
 
 		function addRemove() {

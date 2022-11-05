@@ -3,9 +3,9 @@ import { selectAttributes } from "../HOC/selectAttributes";
 
 class AdjustButtons extends PureComponent {
 	light(id, value, displayValue) {
-		let clName = id === "Color" ? "AttrBtnColor" : "AttrBtnText";
+		const clName = id === "Color" ? "AttrBtnColor" : "AttrBtnText";
 		const selected = this.props.setAttrs;
-		let fullClName = selected.some(
+		const fullClName = selected.some(
 			(a) =>
 				a.attrId === id &&
 				(a.attrValue === value || a.attrValue === displayValue)

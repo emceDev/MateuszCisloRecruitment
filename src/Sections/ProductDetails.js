@@ -20,8 +20,8 @@ class ProductDetails extends PureComponent {
 	}
 	// decoding with sanitization
 	decode(html) {
-		let e = document.getElementsByClassName("Description")[0];
-		e.innerHTML = html;
+		const element = document.getElementsByClassName("Description")[0];
+		element.innerHTML = html;
 		return;
 	}
 	render() {

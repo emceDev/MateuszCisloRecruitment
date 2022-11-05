@@ -6,7 +6,7 @@ class FastShopImage extends PureComponent {
 		return (
 			<img
 				src={fastShopImg}
-				onClick={(e) => {
+				onClick={() => {
 					this.props.counter(true);
 				}}
 				alt="fastShopImg"

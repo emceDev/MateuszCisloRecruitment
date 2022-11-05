@@ -27,7 +27,7 @@ const readyOrder = (PureComponent) => {
 		}
 
 		function order() {
-			let cartToBuy = [];
+			const cartToBuy = [];
 			props.items.map((product) =>
 				cartToBuy.push({
 					...readFragment(product.productId),
