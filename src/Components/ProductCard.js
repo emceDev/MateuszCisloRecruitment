@@ -2,7 +2,6 @@ import { PureComponent } from "react";
 import { Link } from "react-router-dom";
 import Price from "./Price";
 import PNames from "./PNames";
-import AdjustButtons from "./AdjustButtons";
 import FastShopImage from "./fastShopImage";
 
 class ProductCard extends PureComponent {
@@ -14,8 +13,7 @@ class ProductCard extends PureComponent {
 		e.preventDefault();
 	}
 	render() {
-		const { inStock, gallery, name, prices, id, isInCart, attributes } =
-			this.props.product;
+		const { inStock, gallery, name, prices, id, isInCart } = this.props.product;
 		return (
 			<div
 				className="ProductCard"

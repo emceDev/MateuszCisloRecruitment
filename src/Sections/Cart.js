@@ -23,7 +23,7 @@ class Cart extends PureComponent {
 		});
 	}
 	render() {
-		const { myBag, items, totalPrices, quantity, urlChanged } = this.props;
+		const { myBag, items, totalPrices, quantity } = this.props;
 		return (
 			<div className="Cart">
 				{myBag ? (

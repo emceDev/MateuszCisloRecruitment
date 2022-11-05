@@ -6,7 +6,7 @@ export const setCount = (PureComponent) => {
 	return function WrappedComponent(props) {
 		const cart = useReactiveVar(cartProductsVar);
 		const productId = props.productId;
-		const { data, loading, error } = useQuery(GET_PRICES, {
+		const { data } = useQuery(GET_PRICES, {
 			variables: { pid: props.productId },
 		});
 		const count = (attrValue) => {
