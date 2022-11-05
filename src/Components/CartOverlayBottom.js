@@ -1,8 +1,8 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import { Link } from "react-router-dom";
 import Price from "./Price";
 
-class CartOverlayBottom extends Component {
+class CartOverlayBottom extends PureComponent {
 	state = {};
 	render() {
 		return (

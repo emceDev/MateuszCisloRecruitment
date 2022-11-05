@@ -2,7 +2,7 @@ import { useReactiveVar, useQuery } from "@apollo/client";
 import { currentCategoryVar } from "../apolloState/client";
 import { GET_CATEGORIES } from "../apolloState/queries";
 
-export const getCategories = (Component) => {
+export const getCategories = (PureComponent) => {
 	return function WrappedComponent(props) {
 		const { data, loading, error } = useQuery(GET_CATEGORIES);
 		const currCat = useReactiveVar(currentCategoryVar);
@@ -15,7 +15,7 @@ export const getCategories = (Component) => {
 			<p>error occurred</p>;
 		} else {
 			return (
-				<Component
+				<PureComponent
 					{...props}
 					categories={data}
 					selected={currCat}

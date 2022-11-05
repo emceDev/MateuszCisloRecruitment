@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 
 import CartProduct from "../Components/CartProduct";
 import CartSwitch from "../Components/CartSwitch";
@@ -6,7 +6,7 @@ import CartOrder from "../Components/CartOrder";
 import CartOverlayBottom from "../Components/CartOverlayBottom";
 import { getCartItems } from "../HOC/getCartItems";
 
-class Cart extends Component {
+class Cart extends PureComponent {
 	state = { cartVisible: true, overlay: false };
 
 	toggleVisibility() {

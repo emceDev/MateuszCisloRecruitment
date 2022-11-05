@@ -2,7 +2,7 @@ import { useQuery, useReactiveVar } from "@apollo/client";
 import { cartProductsVar } from "../apolloState/client";
 import { GET_PRICES } from "../apolloState/queries";
 
-export const addToCart = (Component) => {
+export const addToCart = (PureComponent) => {
 	return function WrappedComponent(props) {
 		const currentCart = useReactiveVar(cartProductsVar);
 		const { data, loading, error } = useQuery(GET_PRICES, {
@@ -21,7 +21,7 @@ export const addToCart = (Component) => {
 		} else if (error) {
 			<p>error occurred</p>;
 		} else {
-			return <Component {...props} data={data} addRemove={addRemove} />;
+			return <PureComponent {...props} data={data} addRemove={addRemove} />;
 		}
 	};
 };

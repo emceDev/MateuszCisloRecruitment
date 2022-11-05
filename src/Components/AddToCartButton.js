@@ -1,7 +1,7 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import { setCount } from "../HOC/setQuantity";
 
-class AddToCartButton extends Component {
+class AddToCartButton extends PureComponent {
 	render() {
 		return (
 			<div

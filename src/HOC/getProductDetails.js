@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { cartProductsVar } from "../apolloState/client";
 import { GET_PRODUCT_DETAILS } from "../apolloState/queries";
 
-export const getProductDetails = (Component) => {
+export const getProductDetails = (PureComponent) => {
 	return function WrappedComponent(props) {
 		let params = useParams().id;
 		const currentCart = useReactiveVar(cartProductsVar);
@@ -31,7 +31,7 @@ export const getProductDetails = (Component) => {
 		} else if (error) {
 			<p>error occurred</p>;
 		} else {
-			return <Component {...props} data={data} addRemove={addRemove} />;
+			return <PureComponent {...props} data={data} addRemove={addRemove} />;
 		}
 	};
 };

@@ -1,7 +1,7 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import { getCurrencies } from "./Price";
 
-class Taxed extends Component {
+class Taxed extends PureComponent {
 	state = {};
 
 	render() {

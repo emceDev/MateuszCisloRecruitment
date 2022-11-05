@@ -1,7 +1,7 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import { selectAttributes } from "../HOC/selectAttributes";
 
-class AdjustButtons extends Component {
+class AdjustButtons extends PureComponent {
 	light(id, value, displayValue) {
 		let clName = id === "Color" ? "AttrBtnColor" : "AttrBtnText";
 		const selected = this.props.setAttrs;

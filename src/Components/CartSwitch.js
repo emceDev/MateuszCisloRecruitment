@@ -1,7 +1,7 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 
 import emptyCartImg from "../images/emptyCart.png";
-class CartSwitch extends Component {
+class CartSwitch extends PureComponent {
 	state = {};
 	render() {
 		return (

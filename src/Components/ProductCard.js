@@ -1,11 +1,11 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import { Link } from "react-router-dom";
 import Price from "./Price";
 import PNames from "./PNames";
 import AdjustButtons from "./AdjustButtons";
 import FastShopImage from "./fastShopImage";
 
-class ProductCard extends Component {
+class ProductCard extends PureComponent {
 	constructor(props) {
 		super(props);
 		this.state = { fastShopBtn: false };

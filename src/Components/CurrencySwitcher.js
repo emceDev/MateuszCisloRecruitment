@@ -1,7 +1,7 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import { getCurrencies } from "../HOC/getCurrencies";
 
-class Switcher extends Component {
+class Switcher extends PureComponent {
 	constructor(props) {
 		super(props);
 		this.state = {

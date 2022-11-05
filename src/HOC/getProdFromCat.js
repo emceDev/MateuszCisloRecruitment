@@ -2,7 +2,7 @@ import { useReactiveVar, useQuery } from "@apollo/client";
 import { currentCategoryVar } from "../apolloState/client";
 import { GET_PRODUCTS } from "../apolloState/queries";
 
-export const getProducts = (Component) => {
+export const getProducts = (PureComponent) => {
 	return function WrappedComponent(props) {
 		const currCat = useReactiveVar(currentCategoryVar);
 		const { data, loading, error } = useQuery(GET_PRODUCTS, {
@@ -13,7 +13,7 @@ export const getProducts = (Component) => {
 		} else if (error) {
 			<p>error occurred</p>;
 		} else {
-			return <Component {...props} products={data} selected={currCat} />;
+			return <PureComponent {...props} products={data} selected={currCat} />;
 		}
 	};
 };

@@ -2,7 +2,7 @@ import { useQuery, useReactiveVar } from "@apollo/client";
 import { cartProductsVar } from "../apolloState/client";
 import { GET_PRICES } from "../apolloState/queries";
 
-export const setCount = (Component) => {
+export const setCount = (PureComponent) => {
 	return function WrappedComponent(props) {
 		const cart = useReactiveVar(cartProductsVar);
 		const productId = props.productId;
@@ -53,7 +53,7 @@ export const setCount = (Component) => {
 			cartProductsVar(newArray);
 		}
 		return (
-			<Component
+			<PureComponent
 				{...props}
 				counter={(attrValue) => {
 					count(attrValue);

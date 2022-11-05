@@ -1,5 +1,5 @@
 import AdjustButtons from "../Components/AdjustButtons";
-import { Component } from "react";
+import { PureComponent } from "react";
 import AddToCartButton from "../Components/AddToCartButton.js";
 import Price from "../Components/Price";
 import PNames from "../Components/PNames";
@@ -7,7 +7,7 @@ import { getProductDetails } from "../HOC/getProductDetails";
 import { sanitize } from "dompurify";
 import Imgs from "../Components/Imgs";
 
-class ProductDetails extends Component {
+class ProductDetails extends PureComponent {
 	constructor() {
 		super();
 		this.state = {

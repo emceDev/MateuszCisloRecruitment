@@ -1,12 +1,12 @@
 import AdjustButtons from "./AdjustButtons";
 import QuantityButtons from "./QuantityButtons";
-import { Component } from "react";
+import { PureComponent } from "react";
 import Price from "./Price";
 import PNames from "./PNames";
 import { getProductDetails } from "../HOC/getProductDetails";
 import { Link } from "react-router-dom";
 
-class CartProduct extends Component {
+class CartProduct extends PureComponent {
 	state = {
 		selected: 0,
 	};

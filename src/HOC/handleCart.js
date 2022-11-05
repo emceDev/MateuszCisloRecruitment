@@ -4,7 +4,7 @@ import { cartProductsVar } from "../apolloState/client";
 import { GET_PD_FOR_CART } from "../apolloState/queries";
 
 // This function adds/removes product to/from cart and handles modified product
-export const handleCart = (Component) => {
+export const handleCart = (PureComponent) => {
 	return function WrappedComponent(props) {
 		const currentCart = useReactiveVar(cartProductsVar);
 		const [isInCart, setIsInCart] = useState(false);
@@ -41,7 +41,11 @@ export const handleCart = (Component) => {
 			<p>error occurred</p>;
 		} else {
 			return (
-				<Component {...props} click={() => addRemove()} isInCart={isInCart} />
+				<PureComponent
+					{...props}
+					click={() => addRemove()}
+					isInCart={isInCart}
+				/>
 			);
 		}
 	};

@@ -1,16 +1,16 @@
 import { useReactiveVar } from "@apollo/client";
-import { Component } from "react";
+import { PureComponent } from "react";
 import { selectedCurrencyVar, taxVar } from "../apolloState/client";
 
-export const getCurrencies = (Component) => {
+export const getCurrencies = (PureComponent) => {
 	return function WrappedComponent(props) {
 		const currenc = useReactiveVar(selectedCurrencyVar);
 		const tax = useReactiveVar(taxVar);
-		return <Component {...props} currenc={currenc} tax={tax} />;
+		return <PureComponent {...props} currenc={currenc} tax={tax} />;
 	};
 };
 
-class Price extends Component {
+class Price extends PureComponent {
 	state = {};
 
 	render() {

@@ -1,9 +1,9 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import ProductCard from "../Components/ProductCard";
 
 import { getProducts } from "../HOC/getProdFromCat";
 
-class ProductList extends Component {
+class ProductList extends PureComponent {
 	state = {};
 	render() {
 		const { selected, products } = this.props;

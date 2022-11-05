@@ -1,11 +1,11 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import { Link } from "react-router-dom";
 import Categories from "../Components/Categories";
 import CurrencySwitcher from "../Components/CurrencySwitcher";
 import navbarLogo from "../images/logoTransparent.png";
 import Cart from "./Cart";
 
-class Navbar extends Component {
+class Navbar extends PureComponent {
 	constructor(props) {
 		super(props);
 		this.state = { cartVisible: false };

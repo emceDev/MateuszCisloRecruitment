@@ -1,7 +1,7 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import { Link } from "react-router-dom";
 import { getCategories } from "../HOC/getCategories";
-class Categories extends Component {
+class Categories extends PureComponent {
 	render() {
 		return (
 			<div

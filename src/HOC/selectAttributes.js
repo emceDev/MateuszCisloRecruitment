@@ -2,7 +2,7 @@ import { gql, useQuery } from "@apollo/client";
 import { GET_PRODUCT_ATTRS } from "../apolloState/queries";
 import { useState, useEffect } from "react";
 
-export const selectAttributes = (Component) => {
+export const selectAttributes = (PureComponent) => {
 	return function WrappedComponent(props) {
 		const { data, loading, error } = useQuery(GET_PRODUCT_ATTRS, {
 			variables: { pid: props.productId },
@@ -48,7 +48,7 @@ export const selectAttributes = (Component) => {
 			<p>error occurred</p>;
 		} else {
 			return (
-				<Component
+				<PureComponent
 					{...props}
 					setAttrs={attrs}
 					attributes={attributes}

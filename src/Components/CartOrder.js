@@ -1,9 +1,9 @@
 import { gql } from "@apollo/client";
-import { Component } from "react";
+import { PureComponent } from "react";
 import Price from "./Price";
 import Taxed from "./Taxed";
 
-const readyOrder = (Component) => {
+const readyOrder = (PureComponent) => {
 	return function WrappedComponent(props) {
 		function readFragment(productId) {
 			return props.client.readFragment({
@@ -39,12 +39,12 @@ const readyOrder = (Component) => {
 		}
 		return (
 			<>
-				<Component {...props} order={order} />
+				<PureComponent {...props} order={order} />
 			</>
 		);
 	};
 };
-class CartOrder extends Component {
+class CartOrder extends PureComponent {
 	state = {};
 	render() {
 		const { totalPrices, quantity } = this.props;

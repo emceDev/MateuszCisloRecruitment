@@ -1,6 +1,6 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 
-class Imgs extends Component {
+class Imgs extends PureComponent {
 	state = { count: 0 };
 	render() {
 		return (

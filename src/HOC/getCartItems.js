@@ -3,7 +3,7 @@ import { useQuery, useReactiveVar } from "@apollo/client";
 import { useEffect, useState } from "react";
 import { GET_CART } from "../apolloState/queries";
 
-export const getCartItems = (Component) => {
+export const getCartItems = (PureComponent) => {
 	return function WrappedComponent(props) {
 		const tax = useReactiveVar(taxVar);
 		const [totalPrices, setTotalPrices] = useState([]);
@@ -46,7 +46,7 @@ export const getCartItems = (Component) => {
 			<p>error occurred</p>;
 		} else {
 			return (
-				<Component
+				<PureComponent
 					{...props}
 					items={cart}
 					quantity={quantity}

@@ -1,7 +1,7 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import { setCount } from "../HOC/setQuantity";
 
-class QuantityButtons extends Component {
+class QuantityButtons extends PureComponent {
 	constructor(props) {
 		super(props);
 		this.state = { number: 1 };
