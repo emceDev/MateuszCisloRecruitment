@@ -1,12 +1,12 @@
 import "./App.scss";
-import { PureComponent } from "react";
+import { Component } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./Sections/Navbar";
 import ProductList from "./Sections/ProductList";
 import ProductDetails from "./Sections/ProductDetails";
 import Cart from "./Sections/Cart";
 
-class App extends PureComponent {
+class App extends Component {
 	state = { view: false };
 
 	render() {

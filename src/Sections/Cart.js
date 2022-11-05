@@ -5,6 +5,7 @@ import CartSwitch from "../Components/CartSwitch";
 import CartOrder from "../Components/CartOrder";
 import CartOverlayBottom from "../Components/CartOverlayBottom";
 import { getCartItems } from "../HOC/getCartItems";
+import { withRouter } from "../HOC/withRouter";
 
 class Cart extends PureComponent {
 	state = { cartVisible: true, overlay: false };
@@ -16,9 +17,13 @@ class Cart extends PureComponent {
 			? "none"
 			: "block";
 	}
-
+	componentDidMount() {
+		window.addEventListener("urlChange", () => {
+			return !this.state.cartVisible ? this.toggleVisibility() : null;
+		});
+	}
 	render() {
-		const { myBag, items, totalPrices, quantity } = this.props;
+		const { myBag, items, totalPrices, quantity, urlChanged } = this.props;
 		return (
 			<div className="Cart">
 				{myBag ? (
@@ -39,6 +44,7 @@ class Cart extends PureComponent {
 							<b>{!myBag ? "Cart" : "My bag"}</b>, {items.length}
 							{items.length > 1 || items.length === 0 ? " items" : " item"}
 						</div>
+
 						<div className="CartProducts">
 							{items.map((item) => (
 								<CartProduct
@@ -50,7 +56,6 @@ class Cart extends PureComponent {
 								/>
 							))}
 						</div>
-
 						{myBag ? (
 							<CartOverlayBottom totalPrices={totalPrices} />
 						) : (
@@ -69,4 +74,4 @@ class Cart extends PureComponent {
 	}
 }
 
-export default getCartItems(Cart);
+export default getCartItems(withRouter(Cart));
