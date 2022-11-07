@@ -4,6 +4,8 @@
 	padding-left: 100px;
 	padding-right: 100px;
 	.CartProduct {
+		border-top: 1px solid #e5e5e5;
+		border-bottom: 1px solid #e5e5e5;
 		padding-top: 24px;
 		padding-bottom: 32px;
 		justify-content: space-between;
@@ -13,8 +15,17 @@
 		}
 		.image {
 			width: 200px;
-			height: 288px;
+			height: 100%;
 			margin-left: 20px;
+			position: relative;
+			img {
+				width: 100%;
+			}
+		}
+		.imgBtns {
+			position: absolute;
+			bottom: 16px;
+			right: 16px;
 		}
 	}
 }

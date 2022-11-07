@@ -40,9 +40,14 @@ class Cart extends PureComponent {
 					}}
 				>
 					<div>
-						<div>
-							<b>{!myBag ? "Cart" : "My bag"}</b>, {items.length}
-							{items.length > 1 || items.length === 0 ? " items" : " item"}
+						<div className="Header">
+							<b>{!myBag ? "Cart" : "My bag"}</b>
+							{myBag ? ", " + items.length + " " : null}
+							{myBag
+								? items.length > 1 || items.length === 0
+									? " items"
+									: " item"
+								: null}
 						</div>
 
 						<div className="CartProducts">

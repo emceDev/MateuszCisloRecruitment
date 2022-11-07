@@ -23,9 +23,17 @@
 	position: absolute;
 
 	div {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		width: 110%;
 		background-color: white;
-		padding-left: 25%;
+		width: 114px;
+		height: 45px;
+		.CurrencySymbol {
+		}
+		.CurrencyLabel {
+		}
 	}
 	div:hover {
 		background-color: #eeeeee;

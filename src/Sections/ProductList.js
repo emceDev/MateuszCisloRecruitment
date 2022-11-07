@@ -10,7 +10,7 @@ class ProductList extends PureComponent {
 		if (products !== undefined) {
 			return (
 				<div className="ProductListContainer">
-					<h1 style={{ marginLeft: "5vw" }}>{selected}</h1>
+					<h1>{selected}</h1>
 					<div className="ProductList">
 						{products.category.products.map((product) => {
 							return (

@@ -49,7 +49,6 @@ class CartProduct extends PureComponent {
 						<Link to={`/products/${product.id}`}>
 							<img
 								alt="productphoto"
-								style={{ width: "100%", height: "100%" }}
 								src={product.gallery[this.state.selected]}
 							></img>
 						</Link>

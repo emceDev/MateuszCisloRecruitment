@@ -12,7 +12,7 @@ class Taxed extends PureComponent {
 					price.currency.label === currenc.label ? (
 						<p key={price.currency.label}>
 							{currenc.symbol}
-							{price.amount / tax}
+							{Math.floor(price.amount / tax)}
 						</p>
 					) : null
 				)}

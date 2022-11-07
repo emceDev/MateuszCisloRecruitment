@@ -45,11 +45,7 @@ class ProductDetails extends PureComponent {
 						}}
 					/>
 					<div className="BigImg">
-						<img
-							style={{ height: "100%", width: "100%" }}
-							src={gallery[this.state.selected]}
-							alt="BigImg"
-						></img>
+						<img src={gallery[this.state.selected]} alt="BigImg"></img>
 					</div>
 					<div className="Text">
 						<PNames name={brand} id={id} />

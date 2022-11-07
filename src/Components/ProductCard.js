@@ -48,6 +48,7 @@ class ProductCard extends PureComponent {
 							<FastShopImage productId={id} isInCart={isInCart} />
 						</div>
 						<div
+							className="stockOverlayText"
 							style={{
 								visibility: inStock ? "hidden" : "block",
 							}}

@@ -28,6 +28,12 @@
 	}
 	.col2 {
 		.image {
+			display: flex;
+			align-items: center;
+		}
+		img {
+			height: auto;
+			width: 100%;
 			margin-left: 8px;
 		}
 		width: 153px;

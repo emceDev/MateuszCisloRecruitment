@@ -67,7 +67,7 @@ class CartOrder extends PureComponent {
 					</div>
 				</div>
 				<div className="ButtonOrder" onClick={this.props.order}>
-					Button order
+					Order
 				</div>
 			</div>
 		);

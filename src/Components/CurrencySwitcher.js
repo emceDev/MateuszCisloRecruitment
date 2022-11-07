@@ -33,8 +33,7 @@ class Switcher extends PureComponent {
 									key={currency.symbol}
 									onClick={() => this.props.selectCurrency(currency)}
 								>
-									{currency.symbol}
-									{currency.label}
+									{currency.symbol} {currency.label}
 								</div>
 							);
 						})
