@@ -8,12 +8,12 @@ class CartOverlayBottom extends PureComponent {
 		return (
 			<div className="OverlayBottom" style={{ color: "black" }}>
 				<div>
-					Total:
+					Total
 					<Price prices={this.props.totalPrices} />
 				</div>
 				<div className="Buttons">
 					<Link to={`/Cart`}>
-						<div>ViewBag</div>
+						<div>View Bag</div>
 					</Link>
 					<div className="BtnCheckout">Checkout</div>
 				</div>

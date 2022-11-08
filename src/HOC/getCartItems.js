@@ -1,7 +1,7 @@
 import { taxVar } from "../apolloState/client";
 import { useQuery, useReactiveVar } from "@apollo/client";
 import { useEffect, useState } from "react";
-import { GET_CART } from "../apolloState/queries";
+import { GET_CART, GET_CURRENCIES } from "../apolloState/queries";
 
 export const getCartItems = (PureComponent) => {
 	return function WrappedComponent(props) {
@@ -10,30 +10,47 @@ export const getCartItems = (PureComponent) => {
 		const [quantity, setQuantity] = useState(0);
 		// const cart = useReactiveVar(cartProductsVar);
 		const { data, loading, error } = useQuery(GET_CART);
+		const currencies = useQuery(GET_CURRENCIES);
+
 		const cart = data.cart;
+		let amounts = [];
 		useEffect(() => {
 			const sum = () => {
-				let total = 0;
-				let amounts = [];
-				if (cart[0] !== undefined) {
-					cart[0].prices.map((price) =>
-						amounts.push({ amount: 0, currency: price.currency })
+				console.log("summiung");
+				let totalNum = 0;
+
+				if (cart[0] !== undefined && currencies.loading === false) {
+					// set inintial currencies
+					console.log(currencies);
+					currencies.data.currencies.map((price) =>
+						amounts.push({ amount: 0, currency: price })
 					);
 					cart.map((item) => {
-						total = total + item.inCartQuantity;
-						setQuantity(total);
-						return item.prices.map((price) =>
+						totalNum = totalNum + item.inCartQuantity;
+						setQuantity(totalNum);
+						item.prices.map((price) =>
 							amounts.map((am, index) =>
 								price.currency.label === am.currency.label
 									? (amounts[index].amount =
-											item.inCartQuantity *
-											(amounts[index].amount + price.amount))
+											amounts[index].amount +
+											price.amount * item.inCartQuantity)
 									: null
 							)
 						);
 					});
+					// (amounts[index].amount =
+					// 	item.inCartQuantity *
+					// 	(amounts[index].amount + price.amount))
+					// console.log(amounts);
 					return setTotalPrices(amounts);
 				} else {
+					if (currencies.loading === false) {
+						console.log("ELSE:", currencies.data);
+						currencies.data.currencies.map((price) =>
+							amounts.push({ amount: 0, currency: price })
+						);
+						return setTotalPrices(amounts);
+					}
 				}
 			};
 

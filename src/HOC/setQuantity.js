@@ -27,8 +27,10 @@ export const setCount = (PureComponent) => {
 				quantity = 1;
 			}
 			if (props.isInCart === false) {
+				// console.log("isInCart");
 				return cartProductsVar([...cart, toCartData]);
 			} else {
+				// console.log("changing value");
 				const number = attrValue ? quantity + 1 : quantity - 1;
 
 				return handleWrite(number);
@@ -49,8 +51,8 @@ export const setCount = (PureComponent) => {
 						: newArray.push(product)
 				);
 			}
-
-			cartProductsVar(newArray);
+			// console.log("arraychanged", newArray);
+			return cartProductsVar(newArray);
 		}
 		return (
 			<PureComponent
