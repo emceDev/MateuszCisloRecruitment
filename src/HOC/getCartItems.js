@@ -38,10 +38,6 @@ export const getCartItems = (PureComponent) => {
 							)
 						);
 					});
-					// (amounts[index].amount =
-					// 	item.inCartQuantity *
-					// 	(amounts[index].amount + price.amount))
-					// console.log(amounts);
 					return setTotalPrices(amounts);
 				} else {
 					if (currencies.loading === false) {

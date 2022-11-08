@@ -25,7 +25,8 @@
 		img {
 			width: 20px;
 			height: 20px;
-
+			position: relative;
+			z-index: -2;
 			transform: translate(0%, -36%);
 		}
 	}
