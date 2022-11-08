@@ -14,6 +14,7 @@ class Price extends PureComponent {
 	state = {};
 
 	render() {
+		// console.log(this.props);
 		return (
 			<div className="Price">
 				{this.props.prices.map((price) =>

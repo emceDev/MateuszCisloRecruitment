@@ -13,15 +13,16 @@ export const getCartItems = (PureComponent) => {
 		const currencies = useQuery(GET_CURRENCIES);
 
 		const cart = data.cart;
-		let amounts = [];
+
 		useEffect(() => {
+			let amounts = [];
 			const sum = () => {
 				console.log("summiung");
 				let totalNum = 0;
 
 				if (cart[0] !== undefined && currencies.loading === false) {
 					// set inintial currencies
-					console.log(currencies);
+
 					currencies.data.currencies.map((price) =>
 						amounts.push({ amount: 0, currency: price })
 					);
@@ -38,13 +39,14 @@ export const getCartItems = (PureComponent) => {
 							)
 						);
 					});
+					console.log(amounts);
 					return setTotalPrices(amounts);
 				} else {
 					if (currencies.loading === false) {
-						console.log("ELSE:", currencies.data);
 						currencies.data.currencies.map((price) =>
 							amounts.push({ amount: 0, currency: price })
 						);
+						console.log(amounts);
 						return setTotalPrices(amounts);
 					}
 				}
